@@ -1,0 +1,125 @@
+/* Tokens de design da ONG Torre Forte. Fonte de verdade: specs/design.md.
+   Breakpoints (não podem ser variáveis em media queries): 480px, 768px, 1024px, 1280px. */
+
+:root {
+  /* Cores da marca (extraídas do logo) */
+  --cor-coracao: #D0010C;
+  --cor-coracao-escura: #A8000A;
+  --cor-sol: #FABD03;
+  --cor-sol-escura: #E0A800;
+  --cor-tijolo: #9EA0AC;
+  --cor-grafite: #1F1F21;
+  --cor-grafite-hover: #34343A;
+
+  /* Neutros */
+  --cor-creme: #FAF6EF;
+  --cor-areia: #F1E8DA;
+  --cor-branco: #FFFFFF;
+  --cor-linha: #E4D9C8;
+  --cor-grafite-suave: #55565E;
+
+  /* Estados */
+  --cor-erro: #B3261E;
+  --cor-sucesso: #2E7D32;
+
+  /* Papéis de cor de uma seção clara (padrão).
+     Seções escuras redefinem estes papéis em .secao--escura (base.css),
+     e os componentes só consomem os papéis, nunca as cores diretas. */
+  --fundo: var(--cor-creme);
+  --texto: var(--cor-grafite);
+  --texto-suave: var(--cor-grafite-suave);
+  --destaque: var(--cor-coracao);
+  --borda: var(--cor-linha);
+  --foco: var(--cor-grafite);
+  --btn-primario-fundo: var(--cor-coracao);
+  --btn-primario-fundo-hover: var(--cor-coracao-escura);
+  --btn-primario-texto: var(--cor-branco);
+  --btn-secundario-fundo: var(--cor-grafite);
+  --btn-secundario-fundo-hover: var(--cor-grafite-hover);
+  --btn-secundario-texto: var(--cor-branco);
+  --btn-contorno: var(--cor-grafite);
+
+  /* Tipografia */
+  --fonte-titulo: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --fonte-texto: "DM Sans", "Segoe UI", system-ui, sans-serif;
+
+  --tam-display: clamp(2.75rem, 1.6rem + 5vw, 5.5rem);
+  --tam-h1: clamp(2.25rem, 1.5rem + 3.2vw, 4rem);
+  --tam-h2: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  --tam-h3: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  --tam-impacto: clamp(3rem, 2rem + 4vw, 5rem);
+  --tam-lead: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);
+  --tam-corpo: 1.0625rem;
+  --tam-pequeno: 0.875rem;
+  --tam-rotulo: 0.8125rem;
+  --tam-botao: 1rem;
+
+  --altura-display: 1;
+  --altura-h1: 1.05;
+  --altura-h2: 1.1;
+  --altura-h3: 1.2;
+  --altura-lead: 1.5;
+  --altura-corpo: 1.65;
+
+  --largura-leitura: 65ch;
+
+  /* Espaçamento (base 8px) */
+  --esp-1: 4px;
+  --esp-2: 8px;
+  --esp-3: 12px;
+  --esp-4: 16px;
+  --esp-5: 24px;
+  --esp-6: 32px;
+  --esp-7: 48px;
+  --esp-8: 64px;
+  --esp-9: 96px;
+  --esp-10: 128px;
+
+  --secao-padding: clamp(64px, 10vw, 128px);
+  --container: 1200px;
+  --container-texto: 760px;
+  --margem: 16px;
+  --espaco-cards: 24px;
+
+  /* Bordas, raios e sombras */
+  --raio-sm: 8px;
+  --raio-md: 16px;
+  --raio-lg: 28px;
+  --raio-pill: 999px;
+  --sombra: 0 8px 24px rgba(31, 31, 33, 0.08);
+  --sombra-hover: 0 12px 32px rgba(31, 31, 33, 0.12);
+
+  /* Fotos (limite aprovado: no máximo 960 px em CSS) */
+  --foto-max: 960px;
+
+  /* Movimento */
+  --dur-rapida: 150ms;
+  --dur-padrao: 200ms;
+  --dur-menu: 250ms;
+  --dur-entrada: 500ms;
+  --curva: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --atraso-grade: 80ms;
+
+  /* Camadas */
+  --z-cabecalho: 50;
+  --z-barra-doacao: 40;
+  --z-menu: 60;
+
+  /* Alturas fixas */
+  --altura-cabecalho: 84px;
+  --altura-barra-doacao: 64px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --margem: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --margem: 32px;
+    --espaco-cards: 32px;
+    --altura-cabecalho: 104px;
+  }
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# [PENDENTE] Quando o domínio for definido, trocar DOMINIO-PENDENTE e remover o "#":
+# Sitemap: https://DOMINIO-PENDENTE/sitemap.xml
